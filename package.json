@@ -22,5 +22,8 @@
             "path": "./syntaxes/pebble.tmLanguage.json"
         }]
     },
-    "publisher": "ktvng"
+    "publisher": "ktvng",
+    "repository": {
+        "url": "https://github.com/ktvng/pebble-vscode-syntax-highlighting"
+    }
 }
