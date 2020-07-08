@@ -9,64 +9,64 @@
 			"include": "#strings"
 		},
 		{
-			"name": "classdef.segment.ruby",
+			"name": "meta.class.python",
 			"captures": {
 				"1": {
-					"name": "keyword.class.pebble"
+					"name": "storage.type.class.python"
 				},
 				"2": {
-					"name": "support.class.ruby"
+					"name": "entity.name.type.class.python"
 				}
 			},
 			"match": "^\\s*(class)\\s+(([A-Z]\\w*))(:)"
 		},
 		{
-			"name": "support.function.kernel.ruby",
-			"match": "\\b(print|consider|take)\\b"
+			"name": "support.function.builtin.python",
+			"match": "\\b(ask|print|consider|take)\\b"
 		},
 		{
 			"comment": "used for methods",
 			"match": "\\b([A-Z]\\w*)(\\()",
 			"captures": {
 				"1": {
-					"name": "variable.other.constant.ruby"
+					"name": "meta.function-call.generic.python"
 				},
 				"2": {
-					"name": "paren.symbol.pebble"
+					"name": "source.python"
 				}
 			}
 		},
 		{
-			"name": "support.class.ruby",
+			"name": "meta.class.python",
 			"match": "\\b([A-Z]\\w*)(\\.|'s)",
 			"captures": {
 				"1": {
-					"name": "support.class.ruby"
+					"name": "entity.name.type.class.python"
 				},
 				"2": {
-					"name": "constant.numeric.ruby"
+					"name": "source.python"
 				}
 			}
 		},
 		{
 			"captures": {
 				"1": {
-					"name": "support.class.ruby"
+					"name": "entity.name.type.class.python"
 				},
 				"2": {
-					"name": "keyword.operator.assignment.ruby"
+					"name": "keyword.operator.assignment.python"
 				},
 				"3": {
 					"name": "comment"
 				},
 				"4": {
-					"name": "keyword.class.pebble"
+					"name": "entity.name.type.class.python"
 				}
 			},
 			"match": "(\\b[A-Z]\\w*)\\s*(=)\\s*(a|the)*\\s*(new)\\s*"
 		},
 		{
-			"name": "variable.other.constant.ruby",
+			"name": "source.python",
 			"match": "\\b[A-Z]\\w*\\b"
 		},
 		{
@@ -74,15 +74,15 @@
 			"match": "\\b(class|new)\\b"
 		},
 		{
-			"name": "keyword.operator.logical.ruby",
+			"name": "keyword.operator.logical.python",
 			"match": "\\b(and|&&|or|is|not)\\b"
 		},
 		{
-			"name": "variable.language.self.ruby",
+			"name": "variable.language.special.self.python",
 			"match": "\\b(it|that|caller)\\b"
 		},
 		{
-			"name": "support.function.kernel.ruby",
+			"name": "support.function.builtin.python",
 			"match": "\\b(set|to)\\b"
 		},
 		{
@@ -90,24 +90,28 @@
 			"match": "\\b(the|a)\\b"
 		},
 		{
-			"match": "\\b(0[xX]\\h(?>_?\\h)*|\\d(?>_?\\d)*(\\.(?![^[:space:][:digit:]])(?>_?\\d)*)?([eE][-+]?\\d(?>_?\\d)*)?|0[bB][01]+)\\b",
-			"name": "constant.numeric.ruby"
+			"match": "\\b\\d+(.?\\d*)?\\b",
+			"name": "constant.numeric.python"
 		},
 		{
-			"match": "(%|&|\\*\\*|\\*|\\+|\\-|/)",
-			"name": "keyword.operator.arithmetic.ruby"
+			"match": "(%|\\*|\\+|\\-|/)",
+			"name": "keyword.operator.arithmetic.python"
 		},
 		{
-			"match": "<(?!<|=)|>(?!<|=|>)|<=|>=|==|!=|(?<=[ \\t])\\?",
-			"name": "keyword.operator.comparison.ruby"
+			"match": "<(?!<|=)|>(?!<|=|>)|<=|>=|==|!=",
+			"name": "keyword.operator.comparison.python"
 		},
 		{
 			"match": "=",
-			"name": "keyword.operator.assignment.ruby"
+			"name": "keyword.operator.assignment.python"
 		},
 		{
 			"match": "'s",
-			"name": "constant.numeric.ruby"
+			"name": "constant.numeric.python"
+		},
+		{
+			"match": "\\b(true|false)\\b",
+			"name": "constant.language.python"
 		}
 	],
 	"repository": {
