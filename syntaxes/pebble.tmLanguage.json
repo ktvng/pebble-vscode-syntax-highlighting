@@ -1,0 +1,133 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Pebble",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"name": "classdef.segment.ruby",
+			"captures": {
+				"1": {
+					"name": "keyword.class.pebble"
+				},
+				"2": {
+					"name": "support.class.ruby"
+				}
+			},
+			"match": "^\\s*(class)\\s+(([A-Z]\\w*))(:)"
+		},
+		{
+			"name": "support.function.kernel.ruby",
+			"match": "\\b(print|consider|take)\\b"
+		},
+		{
+			"comment": "used for methods",
+			"match": "\\b([A-Z]\\w*)(\\()",
+			"captures": {
+				"1": {
+					"name": "variable.other.constant.ruby"
+				},
+				"2": {
+					"name": "paren.symbol.pebble"
+				}
+			}
+		},
+		{
+			"name": "support.class.ruby",
+			"match": "\\b([A-Z]\\w*)(\\.|'s)",
+			"captures": {
+				"1": {
+					"name": "support.class.ruby"
+				},
+				"2": {
+					"name": "constant.numeric.ruby"
+				}
+			}
+		},
+		{
+			"captures": {
+				"1": {
+					"name": "support.class.ruby"
+				},
+				"2": {
+					"name": "keyword.operator.assignment.ruby"
+				},
+				"3": {
+					"name": "comment"
+				},
+				"4": {
+					"name": "keyword.class.pebble"
+				}
+			},
+			"match": "(\\b[A-Z]\\w*)\\s*(=)\\s*(a|the)*\\s*(new)\\s*"
+		},
+		{
+			"name": "variable.other.constant.ruby",
+			"match": "\\b[A-Z]\\w*\\b"
+		},
+		{
+			"name": "keyword.class.pebble",
+			"match": "\\b(class|new)\\b"
+		},
+		{
+			"name": "keyword.operator.logical.ruby",
+			"match": "\\b(and|&&|or|is|not)\\b"
+		},
+		{
+			"name": "variable.language.self.ruby",
+			"match": "\\b(it|that|caller)\\b"
+		},
+		{
+			"name": "support.function.kernel.ruby",
+			"match": "\\b(set|to)\\b"
+		},
+		{
+			"name": "comment",
+			"match": "\\b(the|a)\\b"
+		},
+		{
+			"match": "\\b(0[xX]\\h(?>_?\\h)*|\\d(?>_?\\d)*(\\.(?![^[:space:][:digit:]])(?>_?\\d)*)?([eE][-+]?\\d(?>_?\\d)*)?|0[bB][01]+)\\b",
+			"name": "constant.numeric.ruby"
+		},
+		{
+			"match": "(%|&|\\*\\*|\\*|\\+|\\-|/)",
+			"name": "keyword.operator.arithmetic.ruby"
+		},
+		{
+			"match": "<(?!<|=)|>(?!<|=|>)|<=|>=|==|!=|(?<=[ \\t])\\?",
+			"name": "keyword.operator.comparison.ruby"
+		},
+		{
+			"match": "=",
+			"name": "keyword.operator.assignment.ruby"
+		},
+		{
+			"match": "'s",
+			"name": "constant.numeric.ruby"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.pebble",
+				"match": "\\b(if|while|for each|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.pebble",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pebble",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.pebble"
+}

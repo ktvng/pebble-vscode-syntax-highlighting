@@ -1,0 +1,25 @@
+{
+    "name": "pebble-syntax-highlighting",
+    "displayName": "Pebble Syntax Highlighting",
+    "description": "Syntax highlighting for Pebble PL",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.46.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pebble",
+            "aliases": ["Pebble", "pebble"],
+            "extensions": [".pebl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "pebble",
+            "scopeName": "source.pebble",
+            "path": "./syntaxes/pebble.tmLanguage.json"
+        }]
+    }
+}
