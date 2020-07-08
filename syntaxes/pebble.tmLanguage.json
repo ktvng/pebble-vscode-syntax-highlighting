@@ -9,6 +9,7 @@
 			"include": "#strings"
 		},
 		{
+			"comment": "meta.definition.class.pebble",
 			"name": "meta.class.python",
 			"captures": {
 				"1": {
@@ -21,11 +22,12 @@
 			"match": "^\\s*(class)\\s+(([A-Z]\\w*))(:)"
 		},
 		{
+			"comment": "support.function.builtin.pebble",
 			"name": "support.function.builtin.python",
 			"match": "\\b(ask|print|consider|take)\\b"
 		},
 		{
-			"comment": "used for methods",
+			"comment": "meta.function.pebble",
 			"match": "\\b([A-Z]\\w*)(\\()",
 			"captures": {
 				"1": {
@@ -37,6 +39,7 @@
 			}
 		},
 		{
+			"comment": "entity.name.object.pebble",
 			"name": "meta.class.python",
 			"match": "\\b([A-Z]\\w*)(\\.|'s)",
 			"captures": {
@@ -49,6 +52,7 @@
 			}
 		},
 		{
+			"comment": "meta.instantiation.object.phrase.pebble",
 			"captures": {
 				"1": {
 					"name": "entity.name.type.class.python"
@@ -66,52 +70,69 @@
 			"match": "(\\b[A-Z]\\w*)\\s*(=)\\s*(a|the)*\\s*(new)\\s*"
 		},
 		{
+			"comment": "reference.source.pebble",
 			"name": "source.python",
 			"match": "\\b[A-Z]\\w*\\b"
 		},
 		{
+			"comment": "keyword.class.pebble",
 			"name": "keyword.class.pebble",
 			"match": "\\b(class|new)\\b"
 		},
 		{
+			"comment": "keyword.operator.logical.python",
 			"name": "keyword.operator.logical.python",
 			"match": "\\b(and|&&|or|is|not)\\b"
 		},
 		{
+			"comment": "reference.builtin.language.pebble",
 			"name": "variable.language.special.self.python",
 			"match": "\\b(it|that|caller)\\b"
 		},
 		{
+			"comment": "support.assignment.builtin.language.pebble",
 			"name": "support.function.builtin.python",
 			"match": "\\b(set|to)\\b"
 		},
 		{
+			"comment": "comment.pebble",
 			"name": "comment",
 			"match": "\\b(the|a)\\b"
 		},
 		{
+			"comment": "constant.numeric.pebble",
 			"match": "\\b\\d+(.?\\d*)?\\b",
 			"name": "constant.numeric.python"
 		},
 		{
+			"comment": "keyword.operator.arithmetic.pebble",
 			"match": "(%|\\*|\\+|\\-|/)",
 			"name": "keyword.operator.arithmetic.python"
 		},
 		{
+			"comment": "keyword.operator.comparison.pebble",
 			"match": "<(?!<|=)|>(?!<|=|>)|<=|>=|==|!=",
 			"name": "keyword.operator.comparison.python"
 		},
 		{
+			"comment": "keyword.operator.assignment.pebble",
 			"match": "=",
 			"name": "keyword.operator.assignment.python"
 		},
 		{
+			"comment": "keyword.operator.scope.pebble",
 			"match": "'s",
-			"name": "constant.numeric.python"
+			"name": "source.python"
 		},
 		{
+			"comment": "constant.language.pebble",
 			"match": "\\b(true|false)\\b",
 			"name": "constant.language.python"
+		},
+		{
+			"comment": "comment.pebble",
+			"name": "comment",
+			"match": "#.*"
 		}
 	],
 	"repository": {
