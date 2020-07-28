@@ -19,55 +19,24 @@
 					"name": "entity.name.type.class.python"
 				}
 			},
-			"match": "^\\s*(class)\\s+(([A-Z]\\w*))(:)"
+			"match": "(a|an)\\s+(([A-Z]\\w*))(\\(\\):)?"
 		},
 		{
 			"comment": "support.function.builtin.pebble",
 			"name": "support.function.builtin.python",
-			"match": "\\b(ask|print|consider|take)\\b"
+			"match": "\\b(let|ask|print|say|consider|take|here|inherits)\\b"
 		},
 		{
 			"comment": "meta.function.pebble",
 			"match": "\\b([A-Z]\\w*)(\\()",
 			"captures": {
 				"1": {
-					"name": "meta.function-call.generic.python"
+					"name": "entity.name.function.python"
 				},
 				"2": {
 					"name": "source.python"
 				}
 			}
-		},
-		{
-			"comment": "entity.name.object.pebble",
-			"name": "meta.class.python",
-			"match": "\\b([A-Z]\\w*)(\\.|'s)",
-			"captures": {
-				"1": {
-					"name": "entity.name.type.class.python"
-				},
-				"2": {
-					"name": "source.python"
-				}
-			}
-		},
-		{
-			"comment": "meta.instantiation.object.phrase.pebble",
-			"captures": {
-				"1": {
-					"name": "entity.name.type.class.python"
-				},
-				"2": {
-					"name": "keyword.operator.assignment.python"
-				},
-				"3": {
-					"name": "comment"
-				},
-				"4": {
-					"name": "entity.name.type.class.python"
-				}
-			},
-			"match": "(\\b[A-Z]\\w*)\\s*(=)\\s*(a|the)*\\s*(new)\\s*"
 		},
 		{
 			"comment": "reference.source.pebble",
@@ -75,9 +44,9 @@
 			"match": "\\b[A-Z]\\w*\\b"
 		},
 		{
-			"comment": "keyword.class.pebble",
-			"name": "keyword.class.pebble",
-			"match": "\\b(class|new)\\b"
+			"comment": "custom.keyword.operator.comparison.pebble",
+			"match": "(greater than)|(less than)|(geq (to)?)|(leq (to)?)|(is greater than or equal to)|(is less than or equal to)|(equal (to)?)|(equals)",
+			"name": "keyword.operator.comparison.python"
 		},
 		{
 			"comment": "keyword.operator.logical.python",
@@ -87,17 +56,12 @@
 		{
 			"comment": "reference.builtin.language.pebble",
 			"name": "variable.language.special.self.python",
-			"match": "\\b(it|that|caller)\\b"
-		},
-		{
-			"comment": "support.assignment.builtin.language.pebble",
-			"name": "support.function.builtin.python",
-			"match": "\\b(set|to)\\b"
+			"match": "\\b(it|that|caller|self)\\b"
 		},
 		{
 			"comment": "comment.pebble",
 			"name": "comment",
-			"match": "\\b(the|a)\\b"
+			"match": "\\b(the)\\b"
 		},
 		{
 			"comment": "constant.numeric.pebble",
@@ -116,7 +80,7 @@
 		},
 		{
 			"comment": "keyword.operator.assignment.pebble",
-			"match": "=",
+			"match": "(=|\\bis\\b)",
 			"name": "keyword.operator.assignment.python"
 		},
 		{
@@ -139,7 +103,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.pebble",
-				"match": "\\b(if|while|for each|return)\\b"
+				"match": "\\b(if|else|while|for each|return)\\b"
 			}]
 		},
 		"strings": {
