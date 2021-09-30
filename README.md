@@ -4,7 +4,7 @@ The `pebble-vscode-syntax-highlighting` extension provides ground level syntax h
 
 ## Features
 
-Syntax highlighting is supported for all `*.pebl` files. Simply install and enable the extension to start supporting Pebble syntax highlighting.
+Syntax highlighting is supported for all `*.pebl`, `*.peb`, `*.pebble` files. Simply install and enable the extension to start supporting Pebble syntax highlighting.
 
 
 
